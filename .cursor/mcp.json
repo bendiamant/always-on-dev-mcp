@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mandatory-workflow": {
+      "command": "node",
+      "args": ["/Users/bend/Desktop/dev/always-on-dev-mcp/dist/index.js"],
+      "env": {},
+      "enabled": true
+    }
+  }
+} 

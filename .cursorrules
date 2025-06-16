@@ -1,0 +1,138 @@
+# Project Intelligence: Mandatory Workflow MCP Server
+
+## Project Context
+This is an MVP project creating an MCP server that uses "mandatory-sounding" tool names to ensure AI agents naturally adopt workflow orchestration tools. The core innovation is psychological - tools named `initialize_coding_workspace` and `finalize_coding_workspace` appear essential to agents.
+
+## Key Project Patterns
+
+### MVP-First Approach
+- Started with comprehensive enterprise PRD (94 requirements, 8 weeks)
+- Streamlined to focused MVP (32 requirements, 2 weeks)
+- **Learning**: Dramatic scope reduction improved clarity and feasibility
+- **Preference**: Always start with minimal viable implementation
+
+### Tool Naming Psychology
+- **Critical Pattern**: Tool names must sound professionally necessary
+- `initialize_coding_workspace` > `start_session`
+- `finalize_coding_workspace` > `end_session`
+- Future considerations: `validate_workspace_safety`, `ensure_coding_standards`
+- **Key Insight**: Agent adoption depends heavily on perceived necessity
+
+### Architecture Philosophy
+- **Simplicity First**: MVP uses STDIO transport only, file-based storage
+- **Agent-Centric Design**: Everything optimized for agent experience
+- **Transparent Integration**: No disruption to developer workflow
+- **Foundation Focus**: Build extensible base, not feature-complete solution
+
+## Technical Preferences
+
+### Technology Stack (Confirmed)
+- **Language**: TypeScript (type safety + MCP SDK compatibility)
+- **Runtime**: Node.js 18+ (stability, cross-platform)
+- **Dependencies**: Minimal approach (MCP SDK + uuid only)
+- **Transport**: STDIO for MVP (simplicity over flexibility)
+- **Storage**: File-based JSON (debuggable over performant)
+
+### Development Workflow
+- **Documentation First**: Memory bank before implementation
+- **Decision Recording**: Capture architectural choices explicitly
+- **Progress Tracking**: Daily updates to progress.md
+- **Risk Monitoring**: Continuous validation of core assumptions
+
+### Code Organization Patterns
+```typescript
+├── src/
+│   ├── index.ts              # Entry point, server bootstrap
+│   ├── server.ts             # MCP server implementation
+│   ├── tools/                # Individual tool implementations
+│   ├── session.ts            # Session management logic
+│   └── logger.ts             # Logging utilities
+```
+
+## Critical Success Factors
+
+### Primary Risk: Agent Adoption
+- **Hypothesis**: Agents will prioritize "mandatory-sounding" tools
+- **Validation**: 80%+ adoption rate target
+- **Mitigation**: Compelling tool names and descriptions
+
+### Performance Requirements
+- **Response Time**: <2 seconds per tool call
+- **Memory Usage**: <50MB for 100 sessions
+- **Setup Time**: <5 minutes for new users
+
+### Integration Requirements
+- **Primary Target**: Cursor via STDIO
+- **Protocol**: MCP v1.0+ compliance
+- **Configuration**: Environment variables, sensible defaults
+
+## Development Intelligence
+
+### Memory Bank Usage
+- **Complete Foundation**: All 6 core files established before coding
+- **Living Documents**: Update activeContext.md and progress.md regularly
+- **Decision Trail**: systemPatterns.md captures architectural choices
+- **Context Preservation**: Essential for post-reset continuity
+
+### Quality Gates (MVP)
+- Server starts without errors
+- Tools discoverable by Cursor
+- Session lifecycle works (init → work → finalize)
+- Logging produces readable output
+- 80%+ tool adoption rate in testing
+- <2 second tool response times
+
+### Testing Strategy
+- **Manual First**: Primary testing with Cursor
+- **Integration Focus**: MCP protocol compliance
+- **Real Usage**: Tool adoption measurement in practice
+- **Performance**: Response time benchmarking
+
+## User Experience Philosophy
+
+### Developer Experience
+- **Transparent**: Tools work seamlessly without workflow disruption
+- **Professional**: Names suggest proper development practices
+- **Simple**: Zero-config operation with sensible defaults
+- **Reliable**: Graceful degradation, always return success-like responses
+
+### Team Value
+- **Visibility**: Track AI coding activity across team
+- **Governance**: Foundation for responsible AI usage
+- **Insights**: Understanding AI impact on development
+
+## Extension Pathways (Post-MVP)
+
+### Proven Concept Expansion
+- Multi-agent support (Claude Desktop, GitHub Copilot)
+- Additional transport protocols (HTTP, SSE)
+- Database storage backends
+- Advanced monitoring and analytics
+
+### Enterprise Evolution
+- Authentication and authorization
+- Team collaboration features
+- Compliance and audit capabilities
+- Plugin architecture
+
+## Lessons Captured
+
+### PRD Evolution
+- Original scope was too comprehensive for validation
+- MVP focus dramatically improved development clarity
+- "Mandatory tool" concept is the core innovation
+- Psychology matters more than technical features
+
+### Architecture Decisions
+- STDIO transport simplifies integration significantly
+- File-based storage is sufficient for MVP validation
+- Minimal dependencies reduce complexity and risk
+- Session management can be simple for initial version
+
+### Success Validation
+- Tool adoption rate is the primary success metric
+- Cursor integration is critical path
+- Performance requirements are realistic for MVP
+- Foundation must support future enhancements
+
+**Next Phase**: Begin Week 1 implementation following established patterns and architecture. 
