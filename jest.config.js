@@ -1,16 +1,15 @@
 export default {
   roots: ['<rootDir>/src'], // Only look for tests in the src directory
-  // preset: 'ts-jest/presets/default-esm', // Removed preset
+  preset: 'ts-jest/presets/default-esm', // Using the ESM preset
   testEnvironment: 'node',
   transform: {
     '^.+\\.tsx?$': ['ts-jest', {
-      useESM: true, // Important for ES Module support
-      tsconfig: 'tsconfig.json', // Point directly to the tsconfig.json file
-      isolatedModules: false, // Explicitly set isolatedModules to false
+      useESM: true,
+      tsconfig: 'tsconfig.json', // Explicitly point to tsconfig
+      isolatedModules: false, // Crucial for this issue
     }],
   },
-  // If using ESM, Jest needs to know how to handle .ts files as modules
-  // This tells Jest to treat .ts files as ESM
+  // extensionsToTreatAsEsm is usually handled by the preset, but being explicit can help.
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
     // This mapping helps Jest resolve '.js' extensions in imports from .ts files,
