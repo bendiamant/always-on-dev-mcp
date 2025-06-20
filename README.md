@@ -214,4 +214,9 @@ MIT
 
 ## Support
 
-For issues and questions, please check the logs first and ensure proper configuration of Cursor MCP settings. 
+For issues and questions, please check the logs first and ensure proper configuration of Cursor MCP settings.
+
+## Test Coverage
+
+Running the test script (e.g., `npm test` or `yarn test`) will generate a coverage report.
+The HTML report can be found at `coverage/lcov-report/index.html`.
