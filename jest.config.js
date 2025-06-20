@@ -17,4 +17,6 @@ export default {
     // which is often needed when working with ESM and TypeScript.
     '^(\.{1,2}/.*)\\.js$': '$1',
   },
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
 };
