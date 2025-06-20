@@ -23,7 +23,7 @@ npm test
 
 ## Project Architecture
 
-This is a **Mandatory Workflow MCP Server** that uses psychologically compelling tool names (`initialize_coding_workspace`, `finalize_coding_workspace`) to ensure AI agents naturally adopt workflow orchestration. The core innovation is psychological - tools appear professionally necessary to agents.
+This is a **Mandatory Development Workflow MCP Server** that forces the LLM with compelling tool names (`initialize_coding_workspace`, `finalize_coding_workspace`) to ensure AI agents naturally adopt development workflow orchestration. 
 
 ### Key Components
 
