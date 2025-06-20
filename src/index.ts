@@ -9,8 +9,17 @@ import {
 } from '@modelcontextprotocol/sdk/types.js';
 import { SessionManager } from './session.js';
 import { Logger } from './logger.js';
+import * as path from 'path';
+import { fileURLToPath } from 'url';
 
-const logger = new Logger();
+// Determine project root
+// Assumes that when running from dist/, __dirname will be .../dist/
+// So, path.resolve(__dirname, '..') will give the project root.
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const projectRoot = path.resolve(__dirname, '..');
+
+const logger = new Logger(projectRoot);
 const sessionManager = new SessionManager(logger);
 
 const server = new Server(
